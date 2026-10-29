@@ -9,6 +9,9 @@
 - Data Formats — JSON, YAML, XML
 - Containers, Docker, Docker Compose
 - Unit Testing with Mocking
+- Mutation Testing — мутанти и Stryker
+- Web Services — HTTP, REST, auth и Swagger
+- API Testing with Postman — заявки, скриптове и среди
 
 ## Какво качваш в GitHub
 
@@ -16,7 +19,7 @@
 
 - `index.html`
 - `css/`
-- `js/` (`lectures.js` са резюметата, `practice.js` е каталогът, `sheets.js` е текстът на попълнените листове, `markdown.js` ги рендира, `app.js` е логиката)
+- `js/` (`lectures.js` са резюметата, `practice.js` е каталогът на подготовката за изпит, `sheets.js` е текстът на задачите с насоки и решения, `markdown.js` ги рендира, `app.js` е логиката)
 - `.nojekyll`
 - `.gitignore`
 - `README.md`

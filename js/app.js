@@ -139,7 +139,7 @@
   function renderHeader() {
     const modes = [
       ["lectures", "Лекции"],
-      ["practice", "Практика"],
+      ["practice", "Подготовка"],
     ]
       .map(
         ([id, label]) => `
@@ -166,14 +166,14 @@
   function renderPracticeHome(filtered) {
     const cards =
       filtered.length === 0
-        ? `<p class="empty">Няма такова упражнение. Пробвай друга дума.</p>`
+        ? `<p class="empty">Няма такава задача. Пробвай друга дума.</p>`
         : `<section class="grid">${filtered
             .map(
               (book) => `
                 <button class="card" data-action="workbook" data-id="${book.id}">
                   <div class="card-top">
                     <span class="num${book.code.length > 2 ? " num-word" : ""}">${escapeHtml(book.code)}</span>
-                    <span class="tag">Попълнено</span>
+                    <span class="tag">Решение</span>
                   </div>
                   <div>
                     <h2>${escapeHtml(book.title)}</h2>
@@ -186,7 +186,7 @@
             .join("")}</section>`;
 
     const count =
-      filtered.length === 1 ? "1 лист" : `${filtered.length} листа`;
+      filtered.length === 1 ? "1 задача" : `${filtered.length} задачи`;
 
     return `
       <main class="wrap">
@@ -199,8 +199,8 @@
             class="search"
             data-action="search"
             value="${escapeHtml(state.query)}"
-            placeholder="Търси упражнение…"
-            aria-label="Търсене в упражненията"
+            placeholder="Търси задача…"
+            aria-label="Търсене в подготовката"
           />
           <div class="count">${count}</div>
         </div>
@@ -234,7 +234,7 @@
 
     return `
       <main class="wrap lecture">
-        <button class="back" data-action="practice-home">← Към упражненията</button>
+        <button class="back" data-action="practice-home">← Към подготовката</button>
         <p class="sheet-kicker">${escapeHtml(book.code)} · ${escapeHtml(kicker)}</p>
         ${body}
       </main>`;
